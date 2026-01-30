@@ -8,13 +8,15 @@ const rates = {
         debit: 4.05, pix: 2.50,
         credit: [6.10, 7.92, 8.54, 9.10, 9.80, 10.50, 11.25, 12.00, 12.75, 13.50, 14.00, 14.75, 15.87, 16.57, 17.27, 17.98, 18.68, 19.39, 20.09, 20.40, 21.10]
     },
+        amex: {
+        debit: null, pix: 2.50,
+        // Corrigido o 16.45 para 17.45 na posição 15 (index 14)
+        credit: [6.75, 8.12, 8.82, 9.53, 10.23, 10.93, 11.83, 12.53, 13.23, 13.94, 14.64, 15.34, 16.04, 16.75, 17.45, 18.15, 18.86, 19.56, 20.25, 20.95, 21.65]
+    },
     hiper: {
         debit: null, pix: 2.50,
+        // Conferido: 15x (index 14) é 16.97, está correto no seu código original
         credit: [5.72, 7.62, 8.33, 9.33, 9.74, 10.35, 11.34, 12.04, 12.75, 13.75, 14.16, 14.86, 15.57, 16.27, 16.97, 17.68, 18.38, 19.09, 19.79, 20.49, 21.19]
-    },
-    amex: {
-        debit: null, pix: 2.50,
-        credit: [6.75, 8.12, 8.82, 9.53, 10.23, 10.93, 11.83, 12.53, 13.23, 13.94, 14.64, 15.34, 16.04, 16.75, 16.45, 18.15, 18.86, 19.56, 20.25, 20.95, 21.65]
     },
     cabal: {
         debit: 7.75, pix: 2.50,
@@ -92,5 +94,6 @@ function calculate() {
     els.receiveAmount.innerText = receive.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
     els.chargeAmount.innerText = charge.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 }
+
 
 init();
