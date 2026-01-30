@@ -132,25 +132,3 @@ h1 { font-size: 42px; margin: 5px 0 20px 0; }
 }
 
 .bold { color: white; font-weight: bold; }
-.share-button {
-    width: 100%;
-    padding: 16px;
-    background-color: var(--accent); /* Azul principal que você já usa */
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    margin-top: 10px;
-}
-
-.share-button:active {
-    transform: scale(0.98);
-    background-color: #3b5bdb;
-}
-
-.share-button.success {
-    background-color: #2b8a3e; /* Muda para verde ao copiar */
-}
